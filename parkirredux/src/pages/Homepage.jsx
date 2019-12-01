@@ -11,10 +11,14 @@ class Homepage extends Component {
     }    
     
     mobilOnClick=()=>{
+        this.setState({durasi:0}) // jika sebelumnya sudah terisi, jam di reset ulang
+        this.props.Mobil(0) //  jika sebelumnya sudah terisi, biaya di reset ulang
         this.setState({indextampilkan:1})
     }
     
     motorOnClick=()=>{
+        this.setState({durasi:0}) // jika sebelumnya sudah terisi, jam di reset ulang
+        this.props.Motor(0) //  jika sebelumnya sudah terisi, biaya di reset ulang
         this.setState({indextampilkan:2})
     }
 
@@ -50,7 +54,7 @@ class Homepage extends Component {
                     <div className="mt-5">
                         <input ref="inputdurasi" className="mr-3" type="number" />
                         <strong className="ml-3">Jam</strong>
-                        <h6 className="mt-5 font-weight-bold" style={{color:'red'}}>Total Bayar Rp {this.props.bebas},00</h6>
+                        <h6 className="mt-5 font-weight-bold" style={{color:'red'}}>Total Bayar<strong style={{color:'black'}}> Rp{this.props.bebas},00</strong> </h6>
                         <button onClick={this.parkirMobil} className="btn btn-primary">Bayar</button>
                         <p>{durasi} Jam</p>
                         <h6 className="mt-5" >Catatan = Rp2000/Jam</h6>
@@ -69,7 +73,7 @@ class Homepage extends Component {
                     <div className="mt-5">
                         <input ref="inputdurasi" className="mr-3" type="number" />
                         <strong className="ml-3">Jam</strong>
-                        <h6 className="mt-5 font-weight-bold" style={{color:'blue'}}>Total Bayar Rp {this.props.bebas},00</h6>
+                        <h6 className="mt-5 font-weight-bold" style={{color:'blue'}}>Total Bayar<strong style={{color:'black'}}> Rp{this.props.bebas},00</strong></h6>
                         <button onClick={this.parkirMotor} className="btn btn-primary">Bayar</button>
                         <p> {durasi} Jam </p>
                         <h6 className="mt-5" >Catatan = Rp1000/Jam</h6>
