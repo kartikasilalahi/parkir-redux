@@ -4,20 +4,19 @@ import {Mobil, Motor, Durasiparkir} from '../redux/actions'
 
 
 class Homepage extends Component {
-
     state = {  
         indextampilkan: 0,
     }    
     
     mobilOnClick=()=>{
-        this.setState({durasi:0}) // jika sebelumnya sudah terisi, jam di reset ulang
-        this.props.Mobil(0) //  jika sebelumnya sudah terisi, biaya di reset ulang
+        this.props.Durasiparkir(0)  // jika sebelumnya sudah terisi, jam di reset ulang
+        this.props.Mobil(0)         //  jika sebelumnya sudah terisi, biaya di reset ulang
         this.setState({indextampilkan:1})
     }
     
     motorOnClick=()=>{
-        this.setState({durasi:0}) // jika sebelumnya sudah terisi, jam di reset ulang
-        this.props.Motor(0) //  jika sebelumnya sudah terisi, biaya di reset ulang
+        this.props.Durasiparkir(0)  // jika sebelumnya sudah terisi, jam di reset ulang
+        this.props.Motor(0)         //  jika sebelumnya sudah terisi, biaya di reset ulang
         this.setState({indextampilkan:2})
     }
 
@@ -29,7 +28,6 @@ class Homepage extends Component {
         this.refs.inputdurasi.value=''
         console.log(this.props.Mobil(Number(inputdurasi)))
         console.log(this.props.Durasiparkir(Number(inputdurasi)))
-
     }
 
     // fungsi button bayar parkir motor
@@ -38,7 +36,6 @@ class Homepage extends Component {
         this.props.Motor(Number(inputdurasi))
         this.props.Durasiparkir(Number(inputdurasi))
         this.refs.inputdurasi.value=''
-        // this.setState({durasi:inputdurasi})
     }
     
     // UNtuk menampilkan pilhan parkir
@@ -107,8 +104,8 @@ class Homepage extends Component {
 
 const MapStatetoProps = state => {
     return {
-        bebas: state.bebas,
-        bebas1: state.bebas1
+        bebas: state.bebas,         // bebas menunjukan utk biaya parkir
+        bebas1: state.bebas1        // bebas1 menunjukan utk durasi parkir
     };
 }
 
