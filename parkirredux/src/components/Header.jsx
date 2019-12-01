@@ -28,7 +28,10 @@ const Header = props => {
             <Collapse isOpen={isOpen} navbar>
             <Nav className="ml-auto" navbar>
                 <NavItem>
-                <NavLink href="/components/">Bayar: Rp.{props.bebas},00</NavLink>
+                <NavLink href="/components/" style={{fontWeight:'bold'}}>Durasi: Rp.{props.bebas1} JAM</NavLink>
+                </NavItem>
+                <NavItem>
+                <NavLink href="/components/" style={{fontWeight:'bold'}}>Bayar: Rp.{props.bebas},00</NavLink>
                 </NavItem>
                 <NavItem>
                 <NavLink href="https://github.com/kartikasilalahi">GitHub</NavLink>
@@ -42,7 +45,9 @@ const Header = props => {
 
 const MapStatetoProps = state => {
     return {
-        bebas: state.bebas
+        bebas: state.bebas,
+        bebas1: state.bebas1
+
     };
 }
 

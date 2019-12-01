@@ -15,6 +15,13 @@ export const Motor=(durasi)=>{
     }
 }
 
+export const Durasiparkir=(durasi)=>{
+    return {
+        type: "DURASI",
+        payload: durasi
+    }
+}
+
 
 
 
