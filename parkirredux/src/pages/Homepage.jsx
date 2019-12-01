@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import {connect} from 'react-redux'
-import {Mobil, Motor, Reset} from '../redux/actions'
+import {Mobil, Motor} from '../redux/actions'
 
 
 class Homepage extends Component {
@@ -107,5 +107,5 @@ const MapStatetoProps = state => {
 // untuk mengengkspor dan mengkoneksikan 
 export default connect(
     MapStatetoProps, 
-    {Mobil, Motor, Reset} ) 
+    {Mobil, Motor} ) 
     (Homepage);

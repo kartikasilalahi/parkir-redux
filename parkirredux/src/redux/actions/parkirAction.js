@@ -1,4 +1,4 @@
-import {MOBIL, MOTOR, RESET} from '../../type'
+import {MOBIL, MOTOR} from '../../type'
 
 export const Mobil=(durasi)=>{
     return {
@@ -12,12 +12,6 @@ export const Motor=(durasi)=>{
         type: MOTOR,
         payload: durasi
 
-    }
-}
-
-export const Reset=()=>{
-    return {
-        type: RESET
     }
 }
 
