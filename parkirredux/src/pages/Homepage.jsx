@@ -38,7 +38,7 @@ class Homepage extends Component {
         this.refs.inputdurasi.value=''
     }
     
-    // UNtuk menampilkan pilhan parkir
+    // UNtuk menampilkan setelah memilih pilhan parkir mobil atau motor
     ShowParkir=()=>{
         const {indextampilkan} = this.state
         const {durasi} = this.state

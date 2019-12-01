@@ -27,15 +27,10 @@ const Header = props => {
             <NavbarToggler onClick={toggle} />
             <Collapse isOpen={isOpen} navbar>
             <Nav className="ml-auto" navbar>
-                <NavItem>
-                <NavLink href="/components/" style={{fontWeight:'bold'}}>Durasi: Rp.{props.bebas1} JAM</NavLink>
-                </NavItem>
-                <NavItem>
-                <NavLink href="/components/" style={{fontWeight:'bold'}}>Bayar: Rp.{props.bebas},00</NavLink>
-                </NavItem>
-                <NavItem>
-                <NavLink href="https://github.com/kartikasilalahi">GitHub</NavLink>
-                </NavItem>
+                <NavItem><NavLink > 
+                    <p>{props.bebas1} Jam</p>
+                    Bayar: <p style={{fontWeight:'bolder', fontSize:'23px'}}>Rp.{props.bebas},00</p>
+                </NavLink></NavItem>
             </Nav>
             </Collapse>
         </Navbar>
