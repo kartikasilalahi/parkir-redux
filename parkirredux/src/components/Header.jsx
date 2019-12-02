@@ -6,11 +6,7 @@ import {
     NavbarBrand,
     Nav,
     NavItem,
-    NavLink,
-    UncontrolledDropdown,
-    DropdownToggle,
-    DropdownMenu,
-    DropdownItem
+    NavLink
 } from "reactstrap";
 
 import {connect} from 'react-redux'
@@ -26,7 +22,7 @@ const Header = props => {
             <NavbarBrand href="/">APLIKASI SEDERHANA <p style={{color:'darkgrey', fontSize:'18px'}}>- Kartika Nirwana</p></NavbarBrand>
             <NavbarToggler onClick={toggle} />
             <Collapse isOpen={isOpen} navbar>
-            <Nav className="ml-auto pr-3" navbar>
+            <Nav className="ml-auto px-4" navbar>
                 
 
                 { props.bebas1 > 0 ? (
@@ -42,7 +38,6 @@ const Header = props => {
                     <NavItem><NavLink > {props.bebas2} Word
                     </NavLink></NavItem> ) : null
                 }
-
 
                 <NavItem>
                     <NavLink href="/Hitungkata">

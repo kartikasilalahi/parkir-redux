@@ -20,8 +20,8 @@ class Hitungkata extends Component {
         return ( 
             <div>
                 <div ref="awal">
-                    <h2 ref="judul">Ini Text Area</h2>
-                    <textarea onChange={this.Tampilkan} ref="inputkalimat" type="text" placeholder="input kalimat" style={{width:'60%', border:'1px solid black'}}/>
+                    <h2 ref="judul">Input Kalimat</h2>
+                    <textarea onChange={this.Tampilkan} ref="inputkalimat" type="text" style={{width:'40%', border:'1px solid black'}}/>
                 </div>
                 <div style={{fontWeight:'bold'}}>
                     {this.Hasil()}
