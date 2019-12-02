@@ -21,7 +21,7 @@ class Homepage extends Component {
     }
 
     // fungsi button bayar parkir mobil
-    parkirMobil=(cash)=>{
+    parkirMobil=()=>{
         var inputdurasi = this.refs.inputdurasi.value
         this.props.Mobil(Number(inputdurasi))
         this.props.Durasiparkir(Number(inputdurasi))
@@ -31,7 +31,7 @@ class Homepage extends Component {
     }
 
     // fungsi button bayar parkir motor
-    parkirMotor=(cash=0)=>{
+    parkirMotor=()=>{
         var inputdurasi = this.refs.inputdurasi.value
         this.props.Motor(Number(inputdurasi))
         this.props.Durasiparkir(Number(inputdurasi))
