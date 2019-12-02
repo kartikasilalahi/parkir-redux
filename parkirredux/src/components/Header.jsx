@@ -24,19 +24,9 @@ const Header = props => {
             <Collapse isOpen={isOpen} navbar>
             <Nav className="ml-auto px-4" navbar>
                 
-
-                { props.bebas1 > 0 ? (
-                    <NavItem><NavLink > {props.bebas1} Jam <br/>
-                    Bayar: <p style={{fontWeight:'bolder', fontSize:'23px'}}>Rp.{props.bebas},00</p>
-                    </NavLink></NavItem>
-                    ) : null
-                }
-
                 { props.bebas2 > 1 ? (
-                    <NavItem><NavLink > {props.bebas2} Words
-                    </NavLink></NavItem> ) : props.bebas2 > 0 ? (
-                    <NavItem><NavLink > {props.bebas2} Word
-                    </NavLink></NavItem> ) : null
+                    <NavItem><NavLink > {props.bebas2} Words</NavLink></NavItem> ) : props.bebas2 > 0 ? ( 
+                    <NavItem><NavLink > {props.bebas2} Word</NavLink></NavItem> ) : null
                 }
 
                 <NavItem>
@@ -49,6 +39,12 @@ const Header = props => {
                         Parkir
                     </NavLink>
                 </NavItem>
+
+                { props.bebas1 > 0 ? (
+                    <NavItem><NavLink > {props.bebas1} Jam <br/> <strong>Rp.{props.bebas},00</strong>
+                    </NavLink></NavItem>
+                    ) : null
+                }
             </Nav>
             
             </Collapse>
