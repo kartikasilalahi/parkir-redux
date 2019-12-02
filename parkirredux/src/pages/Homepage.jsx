@@ -41,7 +41,6 @@ class Homepage extends Component {
     // UNtuk menampilkan setelah memilih pilhan parkir mobil atau motor
     ShowParkir=()=>{
         const {indextampilkan} = this.state
-        const {durasi} = this.state
         if (indextampilkan===1) {
             this.refs.awal.innerHTML=null
             return (
@@ -112,5 +111,5 @@ const MapStatetoProps = state => {
 // untuk mengengkspor dan mengkoneksikan 
 export default connect(
     MapStatetoProps, 
-    {Mobil, Motor, Durasiparkir} ) 
+    {Mobil, Motor, Durasiparkir}) 
     (Homepage);

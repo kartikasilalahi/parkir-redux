@@ -7,15 +7,12 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 import Reducer from './redux/reducer'
 import { createStore } from 'redux';
 import {Provider} from 'react-redux'
-import {BrowserRouter} from 'react-router-dom'
 
 const vault = createStore(Reducer)
 
 ReactDOM.render(
     <Provider store={vault}>
-        <BrowserRouter>
-            <App />
-        </BrowserRouter>
+        <App/>
     </Provider>
     
     , document.getElementById('root'));

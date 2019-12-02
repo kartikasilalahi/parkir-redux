@@ -23,15 +23,39 @@ const Header = props => {
     return (
         <div>
         <Navbar color="light" light expand="xs">
-            <NavbarBrand href="/">APLIKASI PARKIR <p style={{color:'darkgrey', fontSize:'18px'}}>- Kartika Nirwana</p></NavbarBrand>
+            <NavbarBrand href="/">APLIKASI SEDERHANA <p style={{color:'darkgrey', fontSize:'18px'}}>- Kartika Nirwana</p></NavbarBrand>
             <NavbarToggler onClick={toggle} />
             <Collapse isOpen={isOpen} navbar>
-            <Nav className="ml-auto" navbar>
-                <NavItem><NavLink > 
-                    <p>{props.bebas1} Jam</p>
+            <Nav className="ml-auto pr-3" navbar>
+                
+
+                { props.bebas1 > 0 ? (
+                    <NavItem><NavLink > {props.bebas1} Jam <br/>
                     Bayar: <p style={{fontWeight:'bolder', fontSize:'23px'}}>Rp.{props.bebas},00</p>
-                </NavLink></NavItem>
+                    </NavLink></NavItem>
+                    ) : null
+                }
+
+                { props.bebas2 > 1 ? (
+                    <NavItem><NavLink > {props.bebas2} Words
+                    </NavLink></NavItem> ) : props.bebas2 > 0 ? (
+                    <NavItem><NavLink > {props.bebas2} Word
+                    </NavLink></NavItem> ) : null
+                }
+
+
+                <NavItem>
+                    <NavLink href="/Hitungkata">
+                        Hitung Kata
+                    </NavLink>
+                </NavItem>
+                <NavItem>
+                    <NavLink href="/Homepage">
+                        Parkir
+                    </NavLink>
+                </NavItem>
             </Nav>
+            
             </Collapse>
         </Navbar>
         </div>
@@ -41,7 +65,9 @@ const Header = props => {
 const MapStatetoProps = state => {
     return {
         bebas: state.bebas,
-        bebas1: state.bebas1
+        bebas1: state.bebas1,
+        bebas2: state.bebas2
+
 
     };
 }
