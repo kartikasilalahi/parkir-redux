@@ -44,28 +44,24 @@ class Homepage extends Component {
         const {indextampilkan} = this.state
         if (indextampilkan===1) {
             return (
-                <div>
-                    <div className="mt-5">
-                        <input ref="inputdurasi" className="mr-3" type="number" />
-                        <strong className="ml-3">Jam</strong>
-                        <h6 className="mt-5 font-weight-bold" style={{color:'red'}}>Total Bayar<strong style={{color:'black'}}> Rp{this.props.bebas},00</strong> </h6>
-                        <button onClick={this.parkirMobil} className="btn btn-primary">Bayar</button>
-                        <p>{this.props.bebas1} Jam</p>
-                        <h6 className="mt-5" >Catatan = Rp2000/Jam</h6>
-                    </div>
+                <div className="mt-5">
+                    <input ref="inputdurasi" className="mr-3" type="number" />
+                    <strong className="ml-3">Jam</strong>
+                    <h6 className="mt-5 font-weight-bold" style={{color:'red'}}>Total Bayar<strong style={{color:'black'}}> Rp{this.props.bebas},00</strong> </h6>
+                    <button onClick={this.parkirMobil} className="btn btn-primary">Bayar</button>
+                    <p>{this.props.bebas1} Jam</p>
+                    <h6 className="mt-5" >Catatan = Rp2000/Jam</h6>
                 </div>
             )
         }else if (indextampilkan===2) {
             return (
-                <div>
-                    <div className="mt-5">
-                        <input ref="inputdurasi" className="mr-3" type="number" />
-                        <strong className="ml-3">Jam</strong>
-                        <h6 className="mt-5 font-weight-bold" style={{color:'blue'}}>Total Bayar<strong style={{color:'black'}}> Rp{this.props.bebas},00</strong></h6>
-                        <button onClick={this.parkirMotor} className="btn btn-primary">Bayar</button>
-                        <p> {this.props.bebas1} Jam </p>
-                        <h6 className="mt-5" >Catatan = Rp1000/Jam</h6>
-                    </div>
+                <div className="mt-5">
+                    <input ref="inputdurasi" className="mr-3" type="number" />
+                    <strong className="ml-3">Jam</strong>
+                    <h6 className="mt-5 font-weight-bold" style={{color:'blue'}}>Total Bayar<strong style={{color:'black'}}> Rp{this.props.bebas},00</strong></h6>
+                    <button onClick={this.parkirMotor} className="btn btn-primary">Bayar</button>
+                    <p> {this.props.bebas1} Jam </p>
+                    <h6 className="mt-5" >Catatan = Rp1000/Jam</h6>
                 </div>
             )
         } 
