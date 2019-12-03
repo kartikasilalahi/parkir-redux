@@ -6,13 +6,13 @@ import { HitungKalimat } from "../redux/actions/textAction";
 class Hitungkata extends Component {
     state = {}    
     
-    Tampilkan=(inputjlh)=>{
+    Tampilkan=()=>{
         var inputjumlah=this.refs.inputkalimat.value
         this.props.HitungKalimat(inputjumlah)
     }
 
     Hasil=()=>{
-        if (this.props.bebas>1) return (<p>{this.props.bebas} Words</p>)
+        if (this.props.bebas2>1) return (<p>{this.props.bebas2} Words</p>)
         else return (<p>{this.props.bebas2} Word</p>)
     }
 
