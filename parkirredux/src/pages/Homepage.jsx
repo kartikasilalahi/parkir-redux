@@ -6,18 +6,19 @@ import {Mobil, Motor, Durasiparkir} from '../redux/actions'
 class Homepage extends Component {
     state = {  
         indextampilkan: 0,
+        kendaraan: ''
     }    
     
     mobilOnClick=()=>{
         this.props.Durasiparkir(0)  // jika sebelumnya sudah terisi, jam di reset ulang
         this.props.Mobil(0)         //  jika sebelumnya sudah terisi, biaya di reset ulang
-        this.setState({indextampilkan:1})
+        this.setState({indextampilkan:1, kendaraan:'MOBIL'})
     }
     
     motorOnClick=()=>{
         this.props.Durasiparkir(0)  // jika sebelumnya sudah terisi, jam di reset ulang
         this.props.Motor(0)         //  jika sebelumnya sudah terisi, biaya di reset ulang
-        this.setState({indextampilkan:2})
+        this.setState({indextampilkan:2, kendaraan:'MOTOR'})
     }
 
     // fungsi button bayar parkir mobil
@@ -42,14 +43,8 @@ class Homepage extends Component {
     ShowParkir=()=>{
         const {indextampilkan} = this.state
         if (indextampilkan===1) {
-            this.refs.awal.innerHTML=null
             return (
                 <div>
-                    <h2>Aplikasi Parkir Mobil</h2>
-                    <div className="mt-2">
-                        <button onClick={this.mobilOnClick} className="btn btn-outline-primary mr-5">Mobil</button>
-                        <button onClick={this.motorOnClick} className="btn btn-outline-primary ml-5">Motor</button>
-                    </div>
                     <div className="mt-5">
                         <input ref="inputdurasi" className="mr-3" type="number" />
                         <strong className="ml-3">Jam</strong>
@@ -61,14 +56,8 @@ class Homepage extends Component {
                 </div>
             )
         }else if (indextampilkan===2) {
-            this.refs.awal.innerHTML=null
             return (
                 <div>
-                    <h2>Aplikasi Parkir Motor</h2>
-                    <div className="mt-2">
-                        <button onClick={this.mobilOnClick} className="btn btn-outline-primary mr-5">Mobil</button>
-                        <button  onClick={this.motorOnClick} className="btn btn-outline-primary ml-5">Motor</button>
-                    </div>
                     <div className="mt-5">
                         <input ref="inputdurasi" className="mr-3" type="number" />
                         <strong className="ml-3">Jam</strong>
@@ -86,7 +75,7 @@ class Homepage extends Component {
         return ( 
             <div>
                 <div ref="awal">
-                    <h2 ref="judul">Aplikasi Parkir</h2>
+                    <h2 ref="judul">Aplikasi Parkir {this.state.kendaraan}</h2>
                     <div className="mt-2">
                         <button onClick={this.mobilOnClick} className="btn btn-outline-primary mr-5">Mobil</button>
                         <button onClick={this.motorOnClick} className="btn btn-outline-primary ml-5">Motor</button>
