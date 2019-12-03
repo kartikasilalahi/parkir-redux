@@ -1,1 +1,2 @@
-export * from './parkirAction'
+export * from "./parkirAction";
+export * from "./parkirAction";
